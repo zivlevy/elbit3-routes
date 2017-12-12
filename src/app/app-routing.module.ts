@@ -7,7 +7,7 @@ import {NotFoundComponent} from './not-found/not-found.component';
 import {LoginGuard} from './guards/login.guard';
 
 const routes: Routes = [
-    {path: 'login', component: LoginComponent},
+    {path: 'login', component: LoginComponent, data: {title: 'ziv is here'}},
     {path: 'dashboard', component: DashboardComponent, canActivate: [LoginGuard]},
     {path: 'about', component: AboutComponent},
     {path: '', redirectTo: 'login' , pathMatch: 'full'},
